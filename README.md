@@ -3,15 +3,16 @@
 The Amateur Radio Club needs a website! We're building it.
 
 ## Goals for the site
-TODO: Fill this in
+See issues
 
 ## Developer Setup
 
 ### Prerequisites
-TODO: Fill this in
+Ruby Version Manager (RVM) - http://rvm.io/rvm
+Ruby - https://www.ruby-lang.org/en/
 
 ### Setup
-TODO: Fill this in
+Follow setup installation instructions on http://rvm.io/rvm/install
 
 
 We are using the [Shared Repository Model][srm]
