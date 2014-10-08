@@ -1,5 +1,5 @@
 require 'sinatra'
-
+require 'haml'
 
 class Main < Sinatra::Base
 
