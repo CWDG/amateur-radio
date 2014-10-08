@@ -1,27 +1,24 @@
 require 'sinatra'
-require 'haml'
+require 'slim'
 
-class Main < Sinatra::Base
-
-	# Set haml to compile to html5
-	set :haml, :format => :html5
+class Main < Sinatra::Application
 
 	# Explicitly set the public directory
 	set :public_folder, File.dirname(__FILE__) + '/public'
 
 	# Set up assets
-	before do
-		cache_control :public, :must_revalidate, :max_age => 60
-	end
+	#before do
+	#	cache_control :public, :must_revalidate, :max_age => 60
+	#end
 
 	get '/' do
-		haml :index
+		slim :index
 	end
 
 	# Handle page not found requests nicely.
 	not_found do
 		status 404
-		haml :oops
+		slim :oops
 	end
 
 end
