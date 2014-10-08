@@ -8,11 +8,11 @@ set :public_folder, File.dirname(__FILE__) + '/public'
 
 # Set up assets
 before do
-  cache_control :public, :must_revalidate, :max_age => 60
+	cache_control :public, :must_revalidate, :max_age => 60
 end
 
 get '/' do
-  haml :index
+	haml :index
 end
 
 # Handle page not found requests nicely.
