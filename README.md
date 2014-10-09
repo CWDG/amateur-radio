@@ -1,21 +1,29 @@
-# Amateur Radio Club Website
+# Foundation Compass Template
 
-The Amateur Radio Club needs a website! We're building it.
+The easiest way to get started with Foundation + Compass.
 
-## Goals for the site
-See issues
+## Requirements
 
-## Developer Setup
+  * Ruby 1.9+
+  * [Node.js](http://nodejs.org)
+  * [compass](http://compass-style.org/): `gem install compass`
+  * [bower](http://bower.io): `npm install bower -g`
 
-### Prerequisites
-Ruby Version Manager (RVM) - http://rvm.io/rvm
-Ruby - https://www.ruby-lang.org/en/
+## Quickstart
 
-### Setup
-Follow setup installation instructions on http://rvm.io/rvm/install
+  * [Download this starter compass project and unzip it](https://github.com/zurb/foundation-compass-template/archive/master.zip)
+  * Run `bower install` to install the latest version of Foundation
+  
+Then when you're working on your project, just run the following command:
 
+```bash
+bundle exec compass watch
+```
 
-We are using the [Shared Repository Model][srm]
+## Upgrading
 
-[srm]: https://guides.github.com/introduction/flow/index.html
+If you'd like to upgrade to a newer version of Foundation down the road just run:
 
+```bash
+bower update
+```
