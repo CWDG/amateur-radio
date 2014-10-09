@@ -1,11 +1,13 @@
-require 'sinatra'
+#require 'sinatra'
+require 'sinatra/base'
+require 'sinatra/assetpack'
 require 'slim'
 
-class App < Sinatra::Base
+class Main < Sinatra::Application
 	register Sinatra::AssetPack
 	assets do
-		serve '/js', from: 'js'
-		serve '/bower_components', from: 'bower_components'
+		#serve '/js', from: 'js'
+		#serve '/bower_components', from: 'bower_components'
 
 		js :modernizr, [
 			'/bower_components/modernizr/modernizr.js',
@@ -20,7 +22,7 @@ class App < Sinatra::Base
 			'/js/app.js'
 		]
 
-		js_compression :jsmin
+		#js_compression :jsmin
 	end
 
 	# Explicitly set the public directory
