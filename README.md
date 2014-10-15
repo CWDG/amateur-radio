@@ -1,29 +1,35 @@
-# Foundation Compass Template
+# Amateur Radio Club at Ohio State
 
-The easiest way to get started with Foundation + Compass.
+A website for the Amateur Radio Club at The Ohio State University.
 
 ## Requirements
 
-  * Ruby 1.9+
   * [Node.js](http://nodejs.org)
-  * [compass](http://compass-style.org/): `gem install compass`
   * [bower](http://bower.io): `npm install bower -g`
 
 ## Quickstart
 
-  * [Download this starter compass project and unzip it](https://github.com/zurb/foundation-compass-template/archive/master.zip)
-  * Run `bower install` to install the latest version of Foundation
-  
-Then when you're working on your project, just run the following command:
+To start the server, just run the following commands:
 
-```bash
-bundle exec compass watch
-```
+````bash
+npm install
+node server
+````
+
+You will then be able to access the project at http://localhost:3000/
 
 ## Upgrading
+
+### Foundation
 
 If you'd like to upgrade to a newer version of Foundation down the road just run:
 
 ```bash
 bower update
 ```
+### Node Libraries
+
+If you'd like to update the libraries for the project run:
+````bash
+npm update --save
+````
