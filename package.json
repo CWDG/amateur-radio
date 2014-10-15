@@ -1,10 +1,13 @@
 {
-  "name": "hello-world",
-  "description": "hello world test app",
+  "name": "w8lt",
+  "description": "Provides a website for W8LT, the Amateur Radio Club at Ohio State.",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
     "express": "4.x",
-    "jade": "^1.7.0"
+    "express-winston": "^0.2.8",
+    "jade": "^1.7.0",
+    "method-override": "^2.2.0",
+    "winston": "^0.8.1"
   }
 }
