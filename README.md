@@ -5,7 +5,8 @@ A website for the Amateur Radio Club at The Ohio State University.
 ## Requirements
 
   * [Node.js](http://nodejs.org)
-  * [bower](http://bower.io): `npm install bower -g`
+  * [bower](http://bower.io): `npm install -g bower`
+  * [grunt](http://gruntjs.com): `npm install -g grunt-cli`
 
 ## Quickstart
 
