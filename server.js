@@ -36,6 +36,19 @@ app.engine('jade', require('jade').__express);
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 
+// Route special pages (robots, humans)
+app.get('/robots.txt', function(req, res) {
+  res.type('text/plain');
+  res.send("User-agent: *");
+  res.end();
+});
+
+app.get('/humans.txt', function(req, res) {
+  res.type('text/plain');
+  res.send("/* SITE */\n\tStandards: HTML5, CSS5");
+  res.end();
+});
+
 // Begin main routing functions
 app.get('/', function (req, res) {
 	res.render('index', { title: 'Hey', message: 'Hello there!'});
