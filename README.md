@@ -86,18 +86,41 @@ task. This task takes advantage of `grunt-contrib-watch` to recompile CSS
 whenever the SASS sources are changed. All changes to the style sheets should be
 made in the files located in `/scss`.
 
-To run the default grunt task run
+To run the default grunt task, which uglifies vendor javascript and creates the
+CSS files, run
 
 ````bash
 grunt
 ````
 
-If you would rather just build the CSS for updating the repository with, then
+If you would rather just build only the CSS for updating the repository with, then
 you should run
 
 ````bash
-grunt build
+grunt build-css
 ````
 
 This should only be done when you are done modifiying the stylesheets for the
 current options.
+
+### Updating Foundation and Other Javascript Providers
+
+Whenever the javascript from vendors is updated via
+
+````bash
+bower update
+````
+
+It is require that you either run
+
+````bash
+grunt
+````
+
+Or
+
+````bash
+grunt build-js
+````
+
+To update the site's uglified copies of the javascript libraries.

@@ -22,6 +22,19 @@ module.exports = function(grunt) {
       }
     },
 
+    uglify: {
+			layout: {
+				options: {
+					mangle: true
+				},
+				files: {
+					'public/vendor/js/modernizr.js': ['bower_components/foundation/js/vendor/modernizr.js'],
+					'public/vendor/js/jquery.js': ['bower_components/foundation/js/vendor/jquery.js'],
+					'public/vendor/js/foundation.js': ['bower_components/foundation/js/foundation.js'],
+				}
+			}
+		},
+
     watch: {
       grunt: { files: ['Gruntfile.js'] },
 
@@ -29,15 +42,18 @@ module.exports = function(grunt) {
         files: 'scss/**/*.scss',
         tasks: ['sass']
       }
-    }
+    },
   });
 
   // Load tasks
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Register tasks
-  grunt.registerTask('build', ['sass']);
-  grunt.registerTask('default', ['sass', 'watch']);
+  grunt.registerTask('build-css', ['sass']);
+  grunt.registerTask('build-js', ['uglify']);
+  grunt.registerTask('build', ['sass', 'uglify']);
+  grunt.registerTask('default', ['sass', 'uglify', 'watch']);
 
 };
