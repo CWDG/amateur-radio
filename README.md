@@ -124,3 +124,29 @@ grunt build-js
 ````
 
 To update the site's uglified copies of the javascript libraries.
+
+### Developing nodejs files without restarting the server
+
+To develop nodejs files without restarting the server, it is reccomended that
+you use (nodemon)[https://www.npmjs.org/package/nodemon]. You can install
+nodemon by running
+
+````bash
+npm install -g nodemon
+````
+
+nodemon is used in a similar fashion to running a node server. To run the
+node server with nodemon run
+
+````bash
+nodemon server
+````
+
+Whenever you save a change to one of the javascript files in the directory,
+nodemon will automatically restart the server for you. This way, you do not have
+to manually restart the server.
+
+While this is not a required development tool, it is recommended when actively
+developing new routes especially when making small changes. Documentation on how
+to use nodemon more effectively can be found at
+https://github.com/remy/nodemon#nodemon.
