@@ -36,6 +36,9 @@ app.engine('jade', require('jade').__express);
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 
+// Set up static asset directories
+app.use(express.static(__dirname + '/public'));
+
 // Route special pages (robots, humans)
 app.get('/robots.txt', function(req, res) {
   res.type('text/plain');
