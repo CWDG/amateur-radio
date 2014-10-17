@@ -7,7 +7,6 @@
     "express": "4.x",
     "express-winston": "^0.2.8",
     "jade": "^1.7.0",
-    "method-override": "^2.2.0",
     "winston": "^0.8.1"
   },
   "devDependencies": {
