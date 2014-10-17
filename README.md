@@ -31,6 +31,73 @@ bower update
 ### Node Libraries
 
 If you'd like to update the libraries for the project run:
+
 ````bash
 npm update --save
 ````
+
+## Development
+
+### Creating new views
+
+New views are created by creating a new route. This is done in the file
+`server.js`. An example route is shown below
+
+````js
+app.get('/', function (req, res) {
+  res.render('index', { title: 'Home' });
+  res.end();
+});
+````
+
+Then, you must create a new view file. All view files are created using the
+[jade](http://jade-lang.com/) template language. This markup language is
+compiled to html before being sent to the user.
+
+New files should be created in `/views` and should extend the file layout.jade
+unless they must use a different style from the rest of the website. These new
+views should start like
+
+````jade
+extend layout
+block content
+````
+
+From there, the content should be included.
+
+#### Partials in jade
+
+jade supports partials through two different methods. One is escaped partials
+
+````jade
+#{variable}
+````
+
+The other is an unescaped partial
+
+````jade
+!{variable}
+````
+
+### Modifying stylesheets
+
+When working with style sheets, it may be convenient to run the default grunt
+task. This task takes advantage of `grunt-contrib-watch` to recompile CSS
+whenever the SASS sources are changed. All changes to the style sheets should be
+made in the files located in `/scss`.
+
+To run the default grunt task run
+
+````bash
+grunt
+````
+
+If you would rather just build the CSS for updating the repository with, then
+you should run
+
+````bash
+grunt build
+````
+
+This should only be done when you are done modifiying the stylesheets for the
+current options.

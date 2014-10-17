@@ -3,11 +3,15 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
     sass: {
       options: {
         includePaths: ['bower_components/foundation/scss']
       },
       dist: {
+        options: {
+          outputStyle: 'compressed',
+        },
         files: [{
           expand: true,
           cwd: 'scss',
@@ -17,12 +21,23 @@ module.exports = function(grunt) {
         }]
       }
     },
+
+    watch: {
+      grunt: { files: ['Gruntfile.js'] },
+
+      sass: {
+        files: 'scss/**/*.scss',
+        tasks: ['sass']
+      }
+    }
   });
 
   // Load tasks
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  // Register and run tasks
-  grunt.registerTask('default', ['sass']);
+  // Register tasks
+  grunt.registerTask('build', ['sass']);
+  grunt.registerTask('default', ['sass', 'watch']);
 
 };
