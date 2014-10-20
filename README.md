@@ -128,7 +128,7 @@ To update the site's uglified copies of the javascript libraries.
 ### Developing nodejs files without restarting the server
 
 To develop nodejs files without restarting the server, it is reccomended that
-you use (nodemon)[https://www.npmjs.org/package/nodemon]. You can install
+you use [nodemon](https://www.npmjs.org/package/nodemon). You can install
 nodemon by running
 
 ````bash
