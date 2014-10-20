@@ -31,6 +31,7 @@ module.exports = function(grunt) {
 					'public/vendor/js/modernizr.js': ['bower_components/foundation/js/vendor/modernizr.js'],
 					'public/vendor/js/jquery.js': ['bower_components/foundation/js/vendor/jquery.js'],
 					'public/vendor/js/foundation.js': ['bower_components/foundation/js/foundation.js'],
+          'public/vendor/js/fastclick.js': ['bower_components/foundation/js/vendor/fastclick.js'],
 				}
 			}
 		},
