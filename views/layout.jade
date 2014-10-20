@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title W8LT - #{title}
+    link(rel='stylesheet', href='/css/app.css')
+    script(type='text/javascript' src='/vendor/js/modernizr.js')
+  body
+    header
+      include ./includes/topnav.jade
+    .row
+      .large-9.push-3.columns
+        block title
+        block content
+      .large-3.pull-9.columns
+        block sidebar
+    include ./includes/footer.jade
+    include ./includes/jsfooter.jade
