@@ -82,6 +82,11 @@ app.get("/", function (req, res) {
   res.end();
 });
 
+app.get("/office", function (req, res) {
+  res.render("office", { title: "The Office" });
+  res.end();
+});
+
 // Handle 404 errors
 app.use(function(req, res, next){
   res.status(404);
