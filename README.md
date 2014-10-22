@@ -1,5 +1,7 @@
 # Amateur Radio Club at Ohio State
 
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
 A website for the Amateur Radio Club at The Ohio State University.
 
 ## Requirements

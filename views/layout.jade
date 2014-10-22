@@ -7,11 +7,6 @@ html
   body
     header
       include ./includes/topnav.jade
-    .row
-      .large-9.push-3.columns
-        block title
-        block content
-      .large-3.pull-9.columns
-        block sidebar
+    block content
     include ./includes/footer.jade
     include ./includes/jsfooter.jade
