@@ -1,92 +1,23 @@
-html
-  body
-    .row
-      .large-12.columns
-        nav.top-bar(data-topbar='data-topbar')
-          ul.title-area
-            li.name
-              h1
-                a(href='#')
-                  | Top Bar Title
-            li.toggle-topbar.menu-icon
-              a(href='#')
-                span menu
-          section.top-bar-section
-            ul.left
-              li
-                a(href='#') Link 1
-              li
-                a(href='#') Link 2
-            ul.right
-              li.search
-                form
-                  input(type='search')
-              li.has-button
-                a.small.button(href='#') Search
-    .row
-      .large-12.columns
-        .hide-for-small
-          #featured
-            img(src='http://placehold.it/1000x400&text=Slide Image', alt='slide image')
-        .row
-          .small-12.show-for-small
-            br
-            img(src='http://placehold.it/1000x600&text=For Small Screens')
-    br
-    .row
-      .large-12.columns
-        .row
-          .large-3.small-6.columns
-            img(src='http://placehold.it/250x250&text=Thumbnail')
-            h6.panel Description
-          .large-3.small-6.columns
-            img(src='http://placehold.it/250x250&text=Thumbnail')
-            h6.panel Description
-          .large-3.small-6.columns
-            img(src='http://placehold.it/250x250&text=Thumbnail')
-            h6.panel Description
-          .large-3.small-6.columns
-            img(src='http://placehold.it/250x250&text=Thumbnail')
-            h6.panel Description
-    .row
-      .large-12.columns
-        .row
-          .large-8.columns
-            .panel.radius
-              .row
-                .large-6.small-6.columns
-                  h4 Header
-                  hr
-                  h5.subheader
-                    | Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
-                  .show-for-small(align='center')
-                    a.small.radius.button(href='#') Call To Action!
-                    br
-                    a.small.radius.button(href='#') Call To Action!
-                .large-6.small-6.columns
-                  p
-                    | Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
-          .large-4.columns.hide-for-small
-            h4 Get In Touch!
-            hr
-            a.large.button.expand(href='#')
-              | Call To Action!
-            a.large.button.expand(href='#')
-              | Call To Action!
-    footer.row
-      .large-12.columns
-        hr
-        .row
-          .large-6.columns
-            p © Copyright no one at all. Go to town.
-          .large-6.columns
-            ul.inline-list.right
-              li
-                a(href='#') Link 1
-              li
-                a(href='#') Link 2
-              li
-                a(href='#') Link 3
-              li
-                a(href='#') Link 4
+extend layout
 
+block content
+	.row
+		.small-1.pull-11.columns
+		.large-10.push-1.columns
+			h3
+				| Page Title
+				small Page subtitle
+			p
+				| TODO: Brief introduction not yet drafted
+			h4 Repeaters
+			ul
+				li 
+					| TX: 442.600, 114.8 CTCSS
+				li 
+					| RX: 447.600, 114.8 CTCSS 
+			p
+				| Room 40, Bevis Hall
+				| 1080 Carmack Road
+				| Columbus, OH 43210
+			p
+				| Contact us at w8lt@osu.edu
