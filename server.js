@@ -87,6 +87,16 @@ app.get("/office", function (req, res) {
   res.end();
 });
 
+app.get("/leaders", function (req, res) {
+  res.render("leaders", { title: "Officers" });
+  res.end();
+});
+
+app.get("/education", function (req, res) {
+  res.render("education", { title: "Education" });
+  res.end();
+});
+
 // Handle 404 errors
 app.use(function(req, res, next){
   res.status(404);
