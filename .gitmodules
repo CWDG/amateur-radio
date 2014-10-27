@@ -1,0 +1,3 @@
+[submodule "vendor/webicons"]
+	path = vendor/webicons
+	url = https://github.com/adamfairhead/webicons.git
