@@ -42,14 +42,23 @@ npm update --save
 
 ### Creating new views
 
-New views are created by creating a new route. This is done in the file
-`server.js`. An example route is shown below
+New views are created by creating a new route. This is done in the routes
+directory. All files in the routes directory are loaded by `/routes/index.js`.
+The routes for the public site are located in `/routes/root.js`. All
+sub-sections of the site should be located in a separate route file similar to
+`root.js`.
+
+An example route file is located below, however, much more complex routes can be
+created using express.
 
 ````js
-app.get('/', function (req, res) {
-  res.render('index', { title: 'Home' });
-  res.end();
-});
+// routes/foo.js
+module.exports = function(app) {
+  app.get('/foo', function (req, res) {
+    res.render('foo', { title: 'Foo' });
+    res.end();
+  });
+}
 ````
 
 Then, you must create a new view file. All view files are created using the

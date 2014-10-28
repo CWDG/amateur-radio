@@ -63,49 +63,8 @@ app.set("views", __dirname + "/views");
 // Set up static asset directories
 app.use(express.static(__dirname + "/public"));
 
-// Route special pages (robots, humans)
-app.get("/robots.txt", function(req, res) {
-  res.type("text/plain");
-  res.send("User-agent: *");
-  res.end();
-});
-
-app.get("/humans.txt", function(req, res) {
-  res.type("text/plain");
-  res.send("/* SITE */\n\tStandards: HTML5, CSS5");
-  res.end();
-});
-
-// Begin main routing functions
-app.get("/", function (req, res) {
-  res.render("index", { title: "Home" });
-  res.end();
-});
-
-app.get("/office", function (req, res) {
-  res.render("office", { title: "The Office" });
-  res.end();
-});
-
-app.get("/leaders", function (req, res) {
-  res.render("leaders", { title: "Officers" });
-  res.end();
-});
-
-app.get("/education", function (req, res) {
-  res.render("education", { title: "Education" });
-  res.end();
-});
-
-app.get("/licensing", function (req, res) {
-  res.render("licensing", { title: "Licensing" });
-  res.end();
-});
-
-app.get("/history", function(req, res) {
-  res.render("history", {title: "History" });
-  res.end();
-});
+// Set up routing
+require('./routes')(app);
 
 // Handle 404 errors
 app.use(function(req, res, next){

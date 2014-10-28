@@ -1,0 +1,8 @@
+/* TEAM */
+    Manager: Joe Warner
+    Contact: warner.512 [AT] osu.edu
+    From:Cleveland, OH, USA
+
+/* SITE */
+    Language: English
+    Doctype:HTML5
