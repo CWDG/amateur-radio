@@ -12,14 +12,22 @@ A website for the Amateur Radio Club at The Ohio State University.
 
 ## Quickstart
 
-To start the server, just run the following commands:
+To start the server for the first time or after any updates, just run the
+following commands:
 
 ````bash
+git submodule init
 npm install
 node server
 ````
 
 You will then be able to access the project at http://localhost:3000/
+
+To start the server subsequent times just run:
+
+````bash
+node server
+````
 
 ## Upgrading
 
@@ -36,6 +44,23 @@ If you'd like to update the libraries for the project run:
 
 ````bash
 npm update --save
+````
+
+### Update Submodules
+
+Git submodules are located in the `/vendor` directory. To update them all run
+
+````bash
+git submodule update --remote --merge
+````
+
+To update only one of them
+
+````bash
+cd vendor/$(submodule)
+git pull
+cd ../..
+git commit -am "Updated submodule: $(submodule)"
 ````
 
 ## Development
