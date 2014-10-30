@@ -16,7 +16,7 @@ To start the server for the first time or after any updates, just run the
 following commands:
 
 ````bash
-git submodule init
+git submodule update --init
 npm install
 node server
 ````
