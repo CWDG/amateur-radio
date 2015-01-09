@@ -2,8 +2,7 @@ extend layout
 
 block content
   .row
-    .small-1.pull-11.columns
-    .large-10.push-1.columns
+    .large-12.columns
       h3
         | The Office
       h5
@@ -13,7 +12,8 @@ block content
         &nbsp;&nbsp; 1080 Carmack Rd <br/>
         &nbsp;&nbsp; Columbus, OH 43210
       // TODO: Add this map properly.
-      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.249276394132!2d-83.03808339999998!3d40.00287915000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388e62278ab739%3A0x6741dcab1feb7eaa!2sBevis+Hall%2C+The+Ohio+State+University%2C+Columbus%2C+OH+43210!5e0!3m2!1sen!2sus!4v1414447341467" width="100%" height="450" frameborder="0" style="border:0")
+      .google-maps
+        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.249276394132!2d-83.03808339999998!3d40.00287915000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388e62278ab739%3A0x6741dcab1feb7eaa!2sBevis+Hall%2C+The+Ohio+State+University%2C+Columbus%2C+OH+43210!5e0!3m2!1sen!2sus!4v1414447341467" width="100%" height="450" frameborder="0" style="border:0")
       h5
         strong What we provide
       p.
@@ -25,4 +25,3 @@ block content
       h5
         strong Equipment
       // TODO: Add list of equipment organized by frequency range
-    .small-1.push-11.columns
