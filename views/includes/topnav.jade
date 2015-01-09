@@ -8,14 +8,15 @@
       section.top-bar-section
         ul.right
           li.divider
-          li
-            a(href='/history') History
-          li.divider
-          li
-            a( href='/office') The Office
-          li.divider
-          li
-            a(href='/leaders') Officers
+          li.has-dropdown
+            a(href='#') About
+            ul.dropdown
+              li
+                a(href='/office') The Office
+              li
+                a(href='/leaders') Officers
+              li
+                a(href='/history') History
           li.divider
           li
             a(href='/education') Education
