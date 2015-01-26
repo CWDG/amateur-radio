@@ -10,8 +10,8 @@ module.exports = function(app) {
     res.end();
   });
 
-  app.get("/licensing", function (req, res) {
+  /*app.get("/licensing", function (req, res) {
     res.render("licensing", { title: "Licensing" });
     res.end();
-  });
+  });*/
 }
